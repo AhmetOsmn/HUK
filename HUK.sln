@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HUK", "HUK\HUK.csproj", "{4355DC42-D907-4F85-8D1D-524C859553E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HUK", "HUK\HUK.csproj", "{4355DC42-D907-4F85-8D1D-524C859553E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HUK(Part-2)", "HUK(Part-2)\HUK(Part-2).csproj", "{5A15C8E3-3FAE-4474-A4BB-36C9A556722A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4355DC42-D907-4F85-8D1D-524C859553E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4355DC42-D907-4F85-8D1D-524C859553E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4355DC42-D907-4F85-8D1D-524C859553E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A15C8E3-3FAE-4474-A4BB-36C9A556722A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A15C8E3-3FAE-4474-A4BB-36C9A556722A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A15C8E3-3FAE-4474-A4BB-36C9A556722A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A15C8E3-3FAE-4474-A4BB-36C9A556722A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

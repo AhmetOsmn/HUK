@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Profile";
+}
+
+<div class="row">
+    <div class="col-4 offset-4">
+        <h1 class="display-4 border-bottom text-center pb-2">@ViewData["Title"]</h1>
+    </div>
+</div>
+
+
+<div class="row mt-4">
+    <div class="col-6 offset-6 my-3">
+        <div class="mb-4">
+            <div asp-validation-summary="All" class="text-danger small"></div>
+        </div>
+    </div>
+    <div class="col-6">
+        <form asp-action="ProfileChangeProfileImage" method="post" enctype="multipart/form-data">
+            <div class="text-center mb-3">
+                <img src="~/uploads/noimage.jpg" class="img-thumbnail w-50 rounded-circle " />
+            </div>
+            <div class="form-group mb-3">
+                <label class="form-label small">Profile Image</label>
+                <input type="file" name="file" class="form-control" accept=".jpg" />
+                <div>
+                    <span class="small text-secondary">
+                        <i class="fa fa-info-circle me-2"></i>Only .jpg files
+                    </span>
+                </div>
+                <div class="text-center mt-3 ">
+                    <button class="btn btn-secondary" type="submit"><i class="fa-solid fa-floppy-disk me-2"></i>Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-6">
+        <form asp-action="ProfileChangeFullName" method="post">
+            <div class="form-group">
+                <label class="form-label small">Name Surname</label>
+                <div class="input-group mb-3">
+                    <input name="fullname" type="text" class="form-control" value="@ViewData["FullName"]" placeholder="John Doe">
+                    <button class="btn btn-secondary" type="submit"><i class="fa-solid fa-floppy-disk"></i> Save</button>
+                </div>
+            </div>
+        </form>
+
+        <form asp-action="ProfileChangePassword" method="post">
+            <div class="form-group">
+                <label class="form-label small">New Password</label>
+                <div class="input-group">
+                    <input name="password" type="password" class="form-control" placeholder="P@ssw0rd!">
+                    <button class="btn btn-secondary" type="submit"><i class="fa-solid fa-floppy-disk"></i> Save</button>
+                </div>
+                @if (ViewData["result"] != null && ViewData["result"] == "PasswordChanged")
+                {
+                    <span class="text-success small">Password Updated.</span>
+                }
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    @if (ViewData["result"] != null && ViewData["result"] == "PasswordChanged")
+    {
+        <script>
+            toastr["success"]("Password Updated.")
+        </script>
+    }
+}
